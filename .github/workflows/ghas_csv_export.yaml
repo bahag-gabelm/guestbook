@@ -19,7 +19,8 @@ jobs:
       - name: GitHub Advanced Security API to CSV
         uses: advanced-security/ghas-to-csv@v3
         env:
-            GITHUB_PAT: ${{ secrets.PAT }}  # you need to set a PAT
+            #GITHUB_PAT: ${{ secrets.PAT }}  # you need to set a PAT
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload CSV
         uses: actions/upload-artifact@v3
         with:
