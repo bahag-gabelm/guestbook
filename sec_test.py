@@ -13,6 +13,11 @@ from cryptography.hazmat.primitives.serialization import load_pem_private_key
 import jwt
 
 
+def read_secret():
+    secret = "my_hardcoded_secret2"
+    print(f"The secret asdas is: {secret}")
+
+
 def delete_file(filename):
     os.remove(filename)
     print(f"File '{filename}' has been deleted.")
@@ -21,6 +26,7 @@ def delete_file(filename):
 def main():
     filename = input("Enter a filename to delete: ")
     delete_file(filename)
+    read_secret()
 
 
 if __name__ == "__main__":
