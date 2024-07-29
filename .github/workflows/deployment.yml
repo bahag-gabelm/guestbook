@@ -9,8 +9,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup GitHub CLI
-        uses: cli/cli/setup-gh@v1
+    #   - name: Setup GitHub CLI
+    #     uses: cli/cli/setup-gh@v1
 
       - name: Create and Update Deployment
         uses: bahag-gabelm/gcp-cloudassesment@main
