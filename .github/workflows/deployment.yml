@@ -16,4 +16,5 @@ jobs:
         uses: bahag-gabelm/deployment@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
           team-short-name: ops
