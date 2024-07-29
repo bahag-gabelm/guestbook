@@ -16,14 +16,17 @@ jobs:
       contents: read
       packages: write
     steps:
-      - name: GitHub Advanced Security API to CSV
-        uses: advanced-security/ghas-to-csv@v3
-        env:
-            GITHUB_PAT: ${{ secrets.PAT }}  # you need to set a PAT
-            #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} #not working 403 error
-      - name: Upload CSV
-        uses: actions/upload-artifact@v3
-        with:
-          name: ghas-data
-          path: ${{ github.workspace }}/*.csv
-          if-no-files-found: error
+      - name: test
+        run: echo "Hello, World!"
+    # steps:
+    #   - name: GitHub Advanced Security API to CSV
+    #     uses: advanced-security/ghas-to-csv@v3
+    #     env:
+    #         GITHUB_PAT: ${{ secrets.PAT }}  # you need to set a PAT
+    #         #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} #not working 403 error
+    #   - name: Upload CSV
+    #     uses: actions/upload-artifact@v3
+    #     with:
+    #       name: ghas-data
+    #       path: ${{ github.workspace }}/*.csv
+    #       if-no-files-found: error
