@@ -5,7 +5,8 @@ on: workflow_dispatch
 jobs:
   kpi-deployment-count:
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions: 
+        deployments: write
     steps:
       - name: Create and Update Deployment
         uses: bahag-gabelm/deployment@main
