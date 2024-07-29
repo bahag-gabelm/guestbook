@@ -13,7 +13,7 @@ jobs:
     #     uses: cli/cli/setup-gh@v1
 
       - name: Create and Update Deployment
-        uses: bahag-gabelm/deploymentt@main
+        uses: bahag-gabelm/deployment@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           team-short-name: ops
