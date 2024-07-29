@@ -15,5 +15,5 @@ jobs:
       - name: Create and Update Deployment
         uses: bahag-gabelm/deployment@main
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           team-short-name: ops
